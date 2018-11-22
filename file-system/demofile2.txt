@@ -1,0 +1,2 @@
+hello there
+Contents of the dummy file

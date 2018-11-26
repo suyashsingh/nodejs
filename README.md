@@ -48,3 +48,26 @@ NPM is the package manager for nodejs.
 
     Now once you have installed the package you will need to include the package in your nodejs project.
     You will have to use the same `require()` method that was used earlier.
+
+
+nodejs events
+--------
+
+* Events can be used for firing some function when something happens. For example
+you can bind an event such that when ever some one tries to open a file you
+put up and alert window, etc.
+
+* nodejs has a built in event module. Using this module you can:
+        - create
+        - listen
+        - fire 
+        your events.
+
+* Objects in nodejs can fire events. eg. the readStream object fires events when 
+opening or closing a file.
+
+* Using the events module you can create, fire adn listen for your own events. You will have to used to require() method for
+including the module.
+
+* Also all event properties and methods are an instance of the
+`EventEmitter` object. So for acessing the event related methods and properties you will need to create an `EventEmitter` object.

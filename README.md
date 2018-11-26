@@ -71,3 +71,20 @@ including the module.
 
 * Also all event properties and methods are an instance of the
 `EventEmitter` object. So for acessing the event related methods and properties you will need to create an `EventEmitter` object.
+
+File Upload / Formidable Module
+--------
+
+Formidable is a very good module for uploading files to the server. 
+You will need to download the module using npm. 
+Then you will have to require that module in your nodejs code,
+and you are good to go.
+
+What is done in this example is that a form is created so
+that the user can selet the file that he has to upload.
+
+Now when the file reaches the server it is first stored in a
+`temporary folder`. You can change the location of the file
+from the temporary location to the location of you choice
+by passing a callback function as the third argumenmt of the
+parse() function.

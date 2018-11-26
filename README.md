@@ -27,3 +27,24 @@ There are the following methods for creating files using the file system module:
 
 5. fs.rename()
     This method is used to rename a file.
+
+
+
+
+nodejs packages
+--------
+NPM is the package manager for nodejs.
+* Modules: are js libraries
+
+* Package in nodejs: will contain all the file that you need 
+    for module.
+
+* Downloading a package:
+    npm install name-of-package
+    say for example `upper-case`
+
+    When you download a package using npm it will create a folder called `node_modules` 
+    in the current directory where you are working.
+
+    Now once you have installed the package you will need to include the package in your nodejs project.
+    You will have to use the same `require()` method that was used earlier.

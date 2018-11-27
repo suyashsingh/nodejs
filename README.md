@@ -99,4 +99,61 @@ MySql
 3. Creating a Table in a database - use the `CREATE TABLE` statment and also mention the
     name of the database where you want to create the table.
 
+    You should also create provide the primary key for the record. This will make the record unique.
+    You can define of the columns as  `INT AUTO_INCREMENT PRIMARY KEY`. It will start with 1 and keep
+    on increasing as you add more entries to the table.
+
+    If the table is already exsists then you will have to alter the table for adding new column (Which will be your primary key) - `ALTER TABLE customers ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY`.
+
 4. Inserting data into the table - use the `INSERT INTO` statement.
+
+    You can either insert single record or multiple records at a time.
+
+    For adding multiple records, you will have to make an array containing the values and
+    insert a `?` in the sql query(It will be replaced by the value array).
+
+    *RESULT object*: When you fire a query you will get a result object back. The result object will
+    contain information about how the query affected the table.
+    
+    The result object looks like:
+
+        {
+            fieldCount: 0,
+            affectedRows: 14,
+            insertId: 0,
+            serverStatus: 2,
+            warningCount: 0,
+            message: '\'Records:14  Duplicated: 0  Warnings: 0',
+            protocol41: true,
+            changedRows: 0
+        } 
+
+    For example:
+        - If you insert multiple columns in to the table you can get the number of rows that were added by checking the `affectedRows` column of the records object.
+
+        - Get the id of the row that you have inserted using `insertId` field. 
+        > *This will work only for single record operations*
+
+
+    5. Selecting data from the table i.e. Quering the data that is in the table - use the `SELECT`      statement.
+
+        - Selecting all columns: `SELECT * FROM table_name`
+
+        - Selecting column name: `SELECT column_1, column_2 from table _name`
+
+
+        Upon execution of the `SELECT`statement, you will get a:
+            1. `result` object &
+            2. `fields` object  
+
+        as result of the query.
+
+        The result object will be an array of objects, with each object denoting a row that was the outcome of your query.
+
+        Fields object is an array containg information about each field in the result.
+
+        You can also use the `where` statement as a filter to the `select` statment. You can use wild cards, ? placeholder, etc.
+
+        *The queries should be escaped using the mysql.escape() method to prevent SQL injection.*
+
+        

@@ -88,3 +88,15 @@ Now when the file reaches the server it is first stored in a
 from the temporary location to the location of you choice
 by passing a callback function as the third argumenmt of the
 parse() function.
+
+MySql
+--------
+
+1. Try connecting to the database.(make sure that the database service is running)
+
+2. Creating a Database - use the `CREATE DATABASE` statement to create database.
+
+3. Creating a Table in a database - use the `CREATE TABLE` statment and also mention the
+    name of the database where you want to create the table.
+
+4. Inserting data into the table - use the `INSERT INTO` statement.

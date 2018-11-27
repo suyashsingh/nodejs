@@ -129,31 +129,34 @@ MySql
         } 
 
     For example:
-        - If you insert multiple columns in to the table you can get the number of rows that were added by checking the `affectedRows` column of the records object.
+    
+    - If you insert multiple columns in to the table you can get the number of rows that were added by checking the `affectedRows` column of the records object.
 
-        - Get the id of the row that you have inserted using `insertId` field. 
-        > *This will work only for single record operations*
-
-
-    5. Selecting data from the table i.e. Quering the data that is in the table - use the `SELECT`      statement.
-
-        - Selecting all columns: `SELECT * FROM table_name`
-
-        - Selecting column name: `SELECT column_1, column_2 from table _name`
+    - Get the id of the row that you have inserted using `insertId` field. 
+    
+    > *This will work only for single record operations*
 
 
-        Upon execution of the `SELECT`statement, you will get a:
-            1. `result` object &
-            2. `fields` object  
+5. Selecting data from the table i.e. Quering the data that is in the table - use the `SELECT`      statement.
 
-        as result of the query.
+    - Selecting all columns: `SELECT * FROM table_name`
 
-        The result object will be an array of objects, with each object denoting a row that was the outcome of your query.
+    - Selecting column name: `SELECT column_1, column_2 from table _name`
 
-        Fields object is an array containg information about each field in the result.
 
-        You can also use the `where` statement as a filter to the `select` statment. You can use wild cards, ? placeholder, etc.
+Upon execution of the `SELECT`statement, you will get a:
 
-        *The queries should be escaped using the mysql.escape() method to prevent SQL injection.*
+    1. `result` object &
+    2. `fields` object  
 
-        
+as result of the query.
+
+The result object will be an array of objects, with each object denoting a row that was the outcome of your query.
+
+Fields object is an array containg information about each field in the result.
+
+You can also use the `where` statement as a filter to the `select` statment. You can use wild cards, ? placeholder, etc.
+
+*The queries should be escaped using the mysql.escape() method to prevent SQL injection.*
+
+    
